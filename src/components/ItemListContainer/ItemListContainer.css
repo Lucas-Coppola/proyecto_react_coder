@@ -2,3 +2,32 @@
     font-size: 3rem;
     text-align: center;
 }
+
+.listaProductosContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.productosContainer {
+    width: 20rem;
+    margin-bottom: 1rem;
+}
+
+.imgProductsList {
+    width: 20rem;
+    height: 20rem;
+}
+
+.agregarCarritoBtn {
+    font-size: 2rem;
+    border-radius: 20px;
+    background-color: unset;
+    margin-left: 5%;
+}
+
+.productosContainer a {
+    text-decoration: unset;
+    color: black;
+}

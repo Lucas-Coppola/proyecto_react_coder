@@ -13,8 +13,8 @@ export default function NavBar() {
           <Navbar.Brand href="#home">Logo</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#features">Productos</Nav.Link>
-            <Nav.Link href="#piercing">Contacto</Nav.Link>
+            <Nav.Link href="#features">América</Nav.Link>
+            <Nav.Link href="#nada">Europa</Nav.Link>
           </Nav>
 
           <CartWidget/>
