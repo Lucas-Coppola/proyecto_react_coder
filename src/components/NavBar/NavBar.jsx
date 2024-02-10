@@ -3,6 +3,8 @@ import { CartWidget } from '../CartWidget/CartWidget'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from 'react-router-dom';
+import './NavBar.css'
 
 
 export default function NavBar() {
@@ -12,9 +14,9 @@ export default function NavBar() {
         <Container>
           <Navbar.Brand href="#home">Logo</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="#features">América</Nav.Link>
-            <Nav.Link href="#nada">Europa</Nav.Link>
+            <NavLink to={'/'}>Inicio</NavLink>
+            <NavLink to={'categoria/america'}>América</NavLink>
+            <NavLink to={'categoria/europa'}>Europa</NavLink>
           </Nav>
 
           <CartWidget/>

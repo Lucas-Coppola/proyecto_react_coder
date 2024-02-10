@@ -1,0 +1,10 @@
+.me-auto a {
+    text-decoration: none;
+    color: gray;
+    margin-right: .5rem;
+    font-size: 1.1rem;
+}
+
+.me-auto .active {
+    color: var(--bs-navbar-brand-color);
+}
