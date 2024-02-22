@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './CartWidget.css'
+import { CartContext } from '../../context/CartContext'
 
 
 export const CartWidget = () => {
+
+  const {cantidadTotal} = useContext(CartContext);
+
   return (
     <>
       <div className="carritoIcon">
-        <a href=""><i className="bi bi-cart-fill"></i></a>
-        <span>0</span>
+        <i className="bi bi-cart-fill"></i>
+        <span>{cantidadTotal()}</span>
       </div>
     </>
   )

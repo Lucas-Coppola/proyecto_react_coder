@@ -1,13 +1,12 @@
-.saludoCoder {
-    font-size: 3rem;
-    text-align: center;
+.containerProductos {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .listaProductosContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin-left: 1rem;
-    margin-right: 1rem;
 }
 
 .productosContainer {

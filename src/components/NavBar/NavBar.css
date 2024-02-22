@@ -5,6 +5,10 @@
     font-size: 1.1rem;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .me-auto .active {
     color: var(--bs-navbar-brand-color);
 }

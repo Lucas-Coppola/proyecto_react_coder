@@ -1,8 +1,5 @@
 .carritoIcon i {
     font-size: 1.5rem;
-}
-
-.carritoIcon a {
     text-decoration: none;
     color: var(--bs-navbar-brand-color);
 }

@@ -25,7 +25,7 @@ export const DetalleProducto = () => {
 
   return (
     <div className="productosContainer">
-        <ItemDetail producto={producto}/>
+        <ItemDetail producto={producto} stock={producto.stock}/>
     </div>
   );
   
