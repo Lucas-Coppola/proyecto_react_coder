@@ -1,0 +1,66 @@
+.checkoutProducto {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.checkoutProducto img {
+    width: 50px;
+    margin-left: 1rem;
+    border-radius: 30px;
+}
+
+.checkoutProducto p {
+    margin-left: .5rem;
+    font-size: 1.5rem;
+    color: black !important;
+}
+
+.checkoutProductoContainer {
+    background-color: white;
+    border-radius: 30px;
+}
+
+.tituloCheckout {
+    color: white;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px -2px 0px black, 
+    2px -2px 0px black, 
+    -2px 2px 0px black;
+}
+
+form label {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px -2px 0px black, 
+    2px -2px 0px black, 
+    -2px 2px 0px black;
+}
+
+form input {
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+.btnFinalizar {
+    margin-top: 1rem;
+}
+
+.errorMensaje {
+    font-size: 1.3rem;
+}
+
+.orderId {
+    font-size: 2rem;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px -2px 0px black, 
+    2px -2px 0px black, 
+    -2px 2px 0px black;
+    text-align: center;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}

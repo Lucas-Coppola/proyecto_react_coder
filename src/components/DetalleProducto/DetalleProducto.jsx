@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { ItemDetail } from './ItemDetail';
+import { db } from '../../firebase/config';
+import { doc, getDoc } from 'firebase/firestore';
 
 export const DetalleProducto = () => {
   const [producto, setProducto] = useState([]);
@@ -8,24 +10,18 @@ export const DetalleProducto = () => {
   const { id } = useParams();
 
   useEffect(() => {
+    const productRef = doc(db, 'productos', `${id}`);
 
-    const dataProductos = async() => {
-      try {
-        const response = await fetch('/productos.json');
-        const data = await response.json();
-        const products = data.find((p) => p.id == id);
-        setProducto(products);
-      }catch(error) {
-        console.log(`Error al obtener los productos ${error}`);
-      }
-    }
-
-    dataProductos();
-  }, [])
+    getDoc(productRef).then((snapshot) => {
+        if(snapshot.exists) {
+          setProducto({id: snapshot.id,...snapshot.data()})
+        }
+    })
+  }, []);
 
   return (
-    <div className="productosContainer">
-        <ItemDetail producto={producto} stock={producto.stock}/>
+    <div className="containerProductos">
+        <ItemDetail producto={producto}/>
     </div>
   );
   

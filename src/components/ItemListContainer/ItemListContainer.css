@@ -1,7 +1,9 @@
 .containerProductos {
-    margin-top: 2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    background-image: url('https://belleza-estetica.com.ar/wp-content/uploads/2023/11/cuanto_mide_un_campo_de_futbol_34969_orig.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
 }
 
 .listaProductosContainer {
@@ -12,9 +14,24 @@
 .productosContainer {
     width: 20rem;
     margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-left: .5rem;
+}
+
+.productosContainer h2 {
+    padding-left: 5px;
+    text-align: center;
+}
+
+.productosContainer a {
+    text-decoration: unset;
+    color: black;
 }
 
 .imgProductsList {
+    padding: 5px;
     width: 20rem;
     height: 20rem;
 }
@@ -26,7 +43,121 @@
     margin-left: 5%;
 }
 
-.productosContainer a {
+.productoDetail {
+    width: 20rem;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: .5rem;
+}
+
+.productoDetail p {
+    color: black !important;
+    font-size: 1.2rem;
+}
+
+.detalle {
+    text-align: left;
+}
+
+.detalle a {
     text-decoration: unset;
     color: black;
+    font-size: 1.2rem;
+}
+
+.detalle p {
+    font-size: 1.2rem;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+}
+
+.contador p {
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.sumarCantidad {
+    background-color: unset;
+    border: unset;
+    font-size: 2rem;
+}
+
+.restarCantidad {
+    background-color: unset;
+    border: unset;
+    font-size: 2rem;
+}
+
+.agregarCarritoBtn {
+    margin-bottom: 10px;
+    width: 87%;
+}
+
+.carritoProductosGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.precioTotalCarrito {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px -2px 0px black, 
+    2px -2px 0px black, 
+    -2px 2px 0px black;
+}
+
+.eliminarProducto {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 1.8rem;
+    border-radius: 10px;
+}
+
+.vaciarCarrito {
+    font-size: 1.2rem;
+    padding: 2px;
+}
+
+.carritoVcio {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 5%;
+    width: 250%;
+    margin-left: 75%;
+    text-shadow: 2px 2px 0px black, 
+    -2px -2px 0px black, 
+    2px -2px 0px black, 
+    -2px 2px 0px black;;
+}
+
+.inicioCarrito {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 5%;
+    text-decoration: none;
+    color: white;
+    transition: .5s;
+    text-shadow: 
+    2px 2px 0px black, 
+    -2px -2px 0px black, 
+    2px -2px 0px black, 
+    -2px 2px 0px black;
+}
+
+.inicioCarrito:hover {
+    font-size: 2.2rem;
+}
+
+.productoAgotado {
+    text-align: center;
+    font-weight: bold;
 }

@@ -1,30 +1,31 @@
-import React, {createContext, useState} from "react";
+import React, { createContext, useState } from "react";
+import Swal from "sweetalert2";
 
 export const CartContext = createContext();
 
-export const CartProvider = ({children}) => {
+export const CartProvider = ({ children }) => {
 
     const [carrito, setCarrito] = useState([]);
 
     const agregarCarrito = (producto, cantidad) => {
         const productoAgregado = carrito.findIndex(p => p.producto.id == producto.id);
-        console.log(producto.stock);
 
-        if(productoAgregado == -1) {
-            const stockNuevo = producto.stock - cantidad;
-            producto.stock = stockNuevo
-            setCarrito([...carrito,{producto, cantidad}]);
-        } else if(cantidad > producto.stock) {
+        if (productoAgregado == -1) {
+            setCarrito([...carrito, { producto, cantidad }]);
+        } else if (cantidad > producto.stock) {
             alert('el stock del producto está agotado');
-        }else {
-            const stockNuevo = producto.stock - cantidad;
-            producto.stock = stockNuevo
+        } else {
             const nuevoProducto = [...carrito];
-            nuevoProducto[productoAgregado].cantidad += cantidad;
-            setCarrito(nuevoProducto);
+            if (producto.stock > nuevoProducto[productoAgregado].cantidad) {
+                nuevoProducto[productoAgregado].cantidad += cantidad;
+                setCarrito(nuevoProducto);
+            } else if (nuevoProducto[productoAgregado].cantidad >= producto.stock) {
+                Swal.fire({
+                    icon: 'error',
+                    title: "Todo el stock en el carrito",
+                });
+            }
         }
-
-        console.log(producto.stock);
     }
 
     const eliminarProducto = (Id) => {
@@ -37,16 +38,16 @@ export const CartProvider = ({children}) => {
     }
 
     const cantidadTotal = () => {
-       const cantidadProductos = carrito.reduce((total, productos) => total + productos.cantidad, 0);
-       return cantidadProductos
+        const cantidadProductos = carrito.reduce((total, productos) => total + productos.cantidad, 0);
+        return cantidadProductos
     }
 
     const precioTotal = () => {
         const precioCarrito = carrito.reduce((total, producto) => total + (producto.producto.precio * producto.cantidad), 0);
         return precioCarrito
-    }   
+    }
 
-    return(
+    return (
         <CartContext.Provider value={{
             carrito,
             agregarCarrito,

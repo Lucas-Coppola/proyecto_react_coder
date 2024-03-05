@@ -7,3 +7,7 @@
 .carritoIcon span {
     color: var(--bs-navbar-brand-color);
 }
+
+.carritoProducto {
+    margin-bottom: 2rem;
+}

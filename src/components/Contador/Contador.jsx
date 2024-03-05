@@ -16,10 +16,12 @@ export const Contador = ({ stock, onAdd }) => {
   }
 
   return (
-    <div>
-      <button onClick={incrementar}>+</button>
+    <div className='contadorContainer'>
+      <div className="contador">
+      <button className='sumarCantidad' onClick={incrementar}>+</button>
       <p>{cantidad}</p>
-      <button onClick={decrementar}>-</button>
+      <button className='restarCantidad' onClick={decrementar}>-</button>
+      </div>
       <button className="agregarCarritoBtn" onClick={agregadoCarrito}>Agregar al carrito</button>
     </div>
   )

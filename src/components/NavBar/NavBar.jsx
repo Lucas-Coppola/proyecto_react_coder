@@ -12,7 +12,7 @@ export default function NavBar() {
     <>
     <Navbar className='navBar' bg="dark" data-bs-theme="dark">
         <Container>
-        <NavLink to={'/'}><Navbar.Brand>Logo</Navbar.Brand></NavLink>
+        <NavLink to={'/'}><Navbar.Brand> Falso 9 </Navbar.Brand></NavLink>
           <Nav className="me-auto">
             <NavLink to={'/'}>Inicio</NavLink>
             <NavLink to={'categoria/america'}>América</NavLink>
